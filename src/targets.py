@@ -142,6 +142,7 @@ def generate(image_size, rects):
     # Iterate over rectangles:
 
     for r in xrange(rects.shape[2]):
+    for r in range(rects.shape[2]):
         rect = rects[:,:,r]
         # Shrink the rectangle, and put in a fillPoly-friendly format
         shrunk_rect = shrink_rect( rect ).astype(np.int32)[np.newaxis,:,:]
